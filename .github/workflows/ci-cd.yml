@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main", "master" ]
   pull_request:
-    branches: [ "main", "feat/*" ]
+    branches: [ "main", "master" ]
 
 jobs:
   build-and-test:
@@ -23,6 +23,5 @@ jobs:
     - name: Instalar dependências
       run: npm install
 
-    - name: Executar testes
+    - name: Executar testes com Jest
       run: npm test
-      # Se ainda não tiver testes configurados, você pode comentar ou ajustar a linha acima
